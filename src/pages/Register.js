@@ -5,6 +5,7 @@ import Wrapper from "../assets/wrappers/RegisterPage";
 import { toast } from 'react-toastify';
 import { useSelector,useDispatch } from "react-redux";
 import { loginUser, registerUser } from "../features/user/userSlice";
+ import { useNavigate } from 'react-router-dom';
 const initialState = {
   name: "",
   email: "",
@@ -15,6 +16,7 @@ const Register = () => {
   const [values, setValues] = useState(initialState);
   const {user,isLoading}= useSelector(store=>store.user);
   const dispatch=useDispatch();
+   const navigate = useNavigate();
 
   const handleChange = (e) => {
    // console.log(e.target);
@@ -41,6 +43,16 @@ const Register = () => {
     console.log(values);
     setValues({ ...values, isMember: !values.isMember });
   };
+  //navigate to home screen 
+
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate('/');//navigating to home page
+      }, 3000);
+    }
+  }, [user, navigate]);
+
 
   return (
     <Wrapper className="full-page">
