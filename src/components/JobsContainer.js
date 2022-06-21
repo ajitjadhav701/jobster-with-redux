@@ -9,14 +9,14 @@ import { getAllJobs } from '../features/allJobs/allJobsSlice';
 
 
 const JobsContainer = () => {
-  const {jobs,isLoAding}=useSelector((store)=>store.allJobs);
+  const {jobs,isLoading}=useSelector((store)=>store.allJobs);
   const dispatch=useDispatch();
 
    useEffect(()=>{
     dispatch(getAllJobs());
   },[]);
 
-  if(isLoAding){
+  if(isLoading){
     return <Loading center/>
   };
   if(jobs.length===0){
