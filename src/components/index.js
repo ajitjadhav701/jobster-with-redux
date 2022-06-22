@@ -6,6 +6,9 @@ import BigSidebar from "./BigSidebar"
 import FormRowSelect from "./FormRowSelect";
 import JobsContainer from "./JobsContainer";
 import SearchContainer from "./SearchContainer";
+import StatsContainer from "./StatsContainer";
+import ChartsContainer from "./ChartsContainer";
+import Loading from "./Loading";
 
 
-export {Logo,FormRow,Navbar,SmallSidebar,BigSidebar,FormRowSelect,JobsContainer,SearchContainer }
+export {Logo,FormRow,Navbar,SmallSidebar,BigSidebar,FormRowSelect,JobsContainer,SearchContainer,ChartsContainer,StatsContainer,Loading }
