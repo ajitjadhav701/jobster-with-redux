@@ -9,7 +9,9 @@ const SearchContainer = () => {
   const { jobTypeOptions, statusOptions } = useSelector((store) => store.job);
 
   const handleSearch=(e)=>{
-    //is loading check later
+    if(isLoading){
+      return
+    }
     dispatch(handleChange({name:e.target.name,value:e.target.value}))
   };
   const handleSubmit=(e)=>{
