@@ -1,5 +1,9 @@
 
-Project in Action -
+Project in Action -https://ajitj-jobster-with-redux.netlify.app/
+
+
+Below is Project flow:
+
 
 #### React Course on Udemy
 (https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
