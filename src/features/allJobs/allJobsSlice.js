@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
-import customFetch from '../../utils/axios';
+import customFetch , { checkForUnauthorizedResponse } from '../../utils/axios';
 import { showStatsThunk, getAllJobsThunk } from './allJobsThunk';
 const initialFiltersState = {
   search: '',
